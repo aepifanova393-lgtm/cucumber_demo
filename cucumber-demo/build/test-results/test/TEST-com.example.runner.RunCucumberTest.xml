@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.runner.RunCucumberTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-07-28T20:16:03" hostname="MacBook-Air-Sergej.local" time="0.055">
+  <properties/>
+  <testcase name="Сложение двух чисел" classname="com.example.runner.RunCucumberTest" time="0.03"/>
+  <testcase name="Деление на ноль выбрасывает ошибку" classname="com.example.runner.RunCucumberTest" time="0.004"/>
+  <testcase name="Example #1.1" classname="com.example.runner.RunCucumberTest" time="0.003"/>
+  <testcase name="Example #1.2" classname="com.example.runner.RunCucumberTest" time="0.002"/>
+  <testcase name="Example #1.3" classname="com.example.runner.RunCucumberTest" time="0.003"/>
+  <testcase name="Example #1.4" classname="com.example.runner.RunCucumberTest" time="0.002"/>
+  <testcase name="Сумма чисел из таблицы" classname="com.example.runner.RunCucumberTest" time="0.006"/>
+  <system-out><![CDATA[
+@Calculator @smoke
+Сценарий: Сложение двух чисел ?[90m# features/calculator.feature:10?[0m
+>>> Старт сценария: Сложение двух чисел
+  ?[32mДано ?[0m?[32mкалькулятор сброшен?[0m    ?[90m# com.example.steps.CalculatorSteps.калькуляторСброшен()?[0m
+  ?[32mКогда ?[0m?[32mя складываю ?[0m?[32m?[1m2?[0m?[32m и ?[0m?[32m?[1m3?[0m     ?[90m# com.example.steps.CalculatorSteps.яСкладываю(double,double)?[0m
+  ?[32mТо ?[0m?[32mрезультат должен быть ?[0m?[32m?[1m5?[0m  ?[90m# com.example.steps.CalculatorSteps.результатДолженБыть(double)?[0m
+<<< Сценарий 'Сложение двух чисел' завершён со статусом: PASSED
+
+@Calculator
+Сценарий: Деление на ноль выбрасывает ошибку    ?[90m# features/calculator.feature:14?[0m
+>>> Старт сценария: Деление на ноль выбрасывает ошибку
+  ?[32mДано ?[0m?[32mкалькулятор сброшен?[0m                      ?[90m# com.example.steps.CalculatorSteps.калькуляторСброшен()?[0m
+  ?[32mКогда ?[0m?[32mя пытаюсь разделить ?[0m?[32m?[1m10?[0m?[32m на ?[0m?[32m?[1m0?[0m             ?[90m# com.example.steps.CalculatorSteps.яПытаюсьРазделить(double,double)?[0m
+  ?[32mТо ?[0m?[32mдолжна произойти ошибка ?[0m?[32m?[1m"Division by zero"?[0m ?[90m# com.example.steps.CalculatorSteps.должнаПроизойтиОшибка(java.lang.String)?[0m
+<<< Сценарий 'Деление на ноль выбрасывает ошибку' завершён со статусом: PASSED
+
+@Calculator @outline
+Структура сценария: Арифметические операции с разными числами ?[90m# features/calculator.feature:25?[0m
+>>> Старт сценария: Арифметические операции с разными числами
+  ?[32mДано ?[0m?[32mкалькулятор сброшен?[0m                                    ?[90m# com.example.steps.CalculatorSteps.калькуляторСброшен()?[0m
+  ?[32mКогда ?[0m?[32mя выполняю операцию ?[0m?[32m?[1m"сложение"?[0m?[32m над ?[0m?[32m?[1m2?[0m?[32m и ?[0m?[32m?[1m3?[0m              ?[90m# com.example.steps.CalculatorSteps.яВыполняюОперацию(java.lang.String,double,double)?[0m
+  ?[32mТо ?[0m?[32mрезультат должен быть ?[0m?[32m?[1m5?[0m                                  ?[90m# com.example.steps.CalculatorSteps.результатДолженБыть(double)?[0m
+<<< Сценарий 'Арифметические операции с разными числами' завершён со статусом: PASSED
+
+@Calculator @outline
+Структура сценария: Арифметические операции с разными числами ?[90m# features/calculator.feature:26?[0m
+>>> Старт сценария: Арифметические операции с разными числами
+  ?[32mДано ?[0m?[32mкалькулятор сброшен?[0m                                    ?[90m# com.example.steps.CalculatorSteps.калькуляторСброшен()?[0m
+  ?[32mКогда ?[0m?[32mя выполняю операцию ?[0m?[32m?[1m"вычитание"?[0m?[32m над ?[0m?[32m?[1m10?[0m?[32m и ?[0m?[32m?[1m4?[0m            ?[90m# com.example.steps.CalculatorSteps.яВыполняюОперацию(java.lang.String,double,double)?[0m
+  ?[32mТо ?[0m?[32mрезультат должен быть ?[0m?[32m?[1m6?[0m                                  ?[90m# com.example.steps.CalculatorSteps.результатДолженБыть(double)?[0m
+<<< Сценарий 'Арифметические операции с разными числами' завершён со статусом: PASSED
+
+@Calculator @outline
+Структура сценария: Арифметические операции с разными числами ?[90m# features/calculator.feature:27?[0m
+>>> Старт сценария: Арифметические операции с разными числами
+  ?[32mДано ?[0m?[32mкалькулятор сброшен?[0m                                    ?[90m# com.example.steps.CalculatorSteps.калькуляторСброшен()?[0m
+  ?[32mКогда ?[0m?[32mя выполняю операцию ?[0m?[32m?[1m"умножение"?[0m?[32m над ?[0m?[32m?[1m3?[0m?[32m и ?[0m?[32m?[1m4?[0m             ?[90m# com.example.steps.CalculatorSteps.яВыполняюОперацию(java.lang.String,double,double)?[0m
+  ?[32mТо ?[0m?[32mрезультат должен быть ?[0m?[32m?[1m12?[0m                                 ?[90m# com.example.steps.CalculatorSteps.результатДолженБыть(double)?[0m
+<<< Сценарий 'Арифметические операции с разными числами' завершён со статусом: PASSED
+
+@Calculator @outline
+Структура сценария: Арифметические операции с разными числами ?[90m# features/calculator.feature:28?[0m
+>>> Старт сценария: Арифметические операции с разными числами
+  ?[32mДано ?[0m?[32mкалькулятор сброшен?[0m                                    ?[90m# com.example.steps.CalculatorSteps.калькуляторСброшен()?[0m
+  ?[32mКогда ?[0m?[32mя выполняю операцию ?[0m?[32m?[1m"деление"?[0m?[32m над ?[0m?[32m?[1m20?[0m?[32m и ?[0m?[32m?[1m5?[0m              ?[90m# com.example.steps.CalculatorSteps.яВыполняюОперацию(java.lang.String,double,double)?[0m
+  ?[32mТо ?[0m?[32mрезультат должен быть ?[0m?[32m?[1m4?[0m                                  ?[90m# com.example.steps.CalculatorSteps.результатДолженБыть(double)?[0m
+<<< Сценарий 'Арифметические операции с разными числами' завершён со статусом: PASSED
+
+@Calculator @datatable
+Сценарий: Сумма чисел из таблицы ?[90m# features/calculator.feature:31?[0m
+>>> Старт сценария: Сумма чисел из таблицы
+  ?[32mДано ?[0m?[32mкалькулятор сброшен?[0m       ?[90m# com.example.steps.CalculatorSteps.калькуляторСброшен()?[0m
+  ?[32mДано ?[0m?[32mсписок чисел:?[0m             ?[90m# com.example.steps.CalculatorSteps.списокЧисел(io.cucumber.datatable.DataTable)?[0m
+    | число |
+    | 1     |
+    | 2     |
+    | 3     |
+    | 4     |
+  ?[32mКогда ?[0m?[32mя суммирую эти числа?[0m     ?[90m# com.example.steps.CalculatorSteps.яСуммируюЭтиЧисла()?[0m
+  ?[32mТо ?[0m?[32mрезультат должен быть ?[0m?[32m?[1m10?[0m    ?[90m# com.example.steps.CalculatorSteps.результатДолженБыть(double)?[0m
+<<< Сценарий 'Сумма чисел из таблицы' завершён со статусом: PASSED
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
