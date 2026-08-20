@@ -9,7 +9,7 @@ import org.junit.platform.suite.api.Suite;
 @Suite
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features")
-//@ConfigurationParameter(key = Constants.FILTER_TAGS_PROPERTY_NAME, value = "@tag")
+@ConfigurationParameter(key = Constants.FILTER_TAGS_PROPERTY_NAME, value = "not @negative")
 @ConfigurationParameter(key = Constants.GLUE_PROPERTY_NAME, value = "com.example.steps")
 @ConfigurationParameter(key = Constants.PLUGIN_PROPERTY_NAME,
         value = "pretty, html:build/cucumber-report/report.html")
